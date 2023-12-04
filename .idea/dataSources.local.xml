@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-223.8214.52">
+    <data-source name="pythonUIdb@localhost" uuid="ffb3be7d-7856-44c0-bbad-f163597e5573">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>kateaan</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="User Data Source" uuid="5ee2248d-f20a-4e33-a597-46cbfc614885">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="UNKNOWN" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>

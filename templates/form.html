@@ -1,0 +1,61 @@
+{% block content %}
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="text-center">Заполнение формы</h1>
+          </div>
+          <div class="card-body">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <div class="alert alert-danger">
+                  <ul>
+                    {% for message in messages %}
+                      <li>{{ message }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+            {% endwith %}
+            <form method="post">
+              <p>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="text" class="form-control" id="email" name="email" required>
+              </div>
+              </p>
+              <p>
+              Выберите TYPE_PARTICIPANT:
+              <select name ="TYPE_PARTICIPANT">
+                {% for item in ['CHAPTER_LEADER', 'TECH LEADER', 'LEADER', 'PARTICIPANT', 'LISTENER', 'COMMUNITY_MANAGER'] %}
+                <option value="{{ item }}">{{ item }}</option>
+                {% endfor %}
+              </select>
+              </p>
+              <p>
+              Выберите ROLE_NAME:
+              <select name="ROLE_NAME">
+                {% for item in ['DATA_ANALYST', 'DATA_SCIENTIST', 'DATA_ENGINEER'] %}
+                <option value="{{ item }}">{{ item }}</option>
+                {% endfor %}
+              </select>
+              </p>
+              <p>
+              <div class="mb-3">
+                <label for="telegram" class="form-label">Telegram:</label>
+                <input type="text" class="form-control" id="telegram" name="telegram" required>
+              </div>
+              </p>
+              <p>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Отправить</button>
+              </div>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
